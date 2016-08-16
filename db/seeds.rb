@@ -5,3 +5,8 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+require 'database_cleaner'
+
+DatabaseCleaner.strategy = :truncation
+DatabaseCleaner.clean
