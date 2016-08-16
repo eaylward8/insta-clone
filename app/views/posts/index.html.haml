@@ -1,1 +1,5 @@
 %h1 Sup Bruh
+- @posts.each do |post|
+  .row
+    = link_to (image_tag post.image.url(:medium), class: 'image-responsive'), post_path(post)
+    %p= post.caption
